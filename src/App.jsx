@@ -5,13 +5,13 @@ import poster from './assets/poster.jpg';
 const SpinWheel = () => {
   const [numbers, setNumbers] = useState(() => {
     const nums = [];
-    for (let i = 1; i <= 10000; i++) {
+    for (let i = 10001; i <= 20000; i++) {
       nums.push(i.toString().padStart(5, '0'));
     }
     return nums;
   });
   
-  const [displayNumber, setDisplayNumber] = useState('00001');
+  const [displayNumber, setDisplayNumber] = useState('10001');
   const [isSpinning, setIsSpinning] = useState(false);
   const [winner, setWinner] = useState(null);
   const [history, setHistory] = useState([]);
@@ -116,10 +116,10 @@ const SpinWheel = () => {
 
   const resetNumbers = () => {
     const nums = [];
-    for (let i = 1; i <= 10000; i++) nums.push(i.toString().padStart(5, '0'));
+    for (let i = 10001; i <= 20000; i++) nums.push(i.toString().padStart(5, '0'));
     setNumbers(nums);
     setHistory([]);
-    setDisplayNumber('00001');
+    setDisplayNumber('10001');
     setWinner(null);
     setRotation(0);
   };
@@ -163,7 +163,7 @@ const SpinWheel = () => {
         <h1 className="text-4xl md:text-5xl font-extrabold text-center bg-gradient-to-r from-yellow-400 via-pink-500 to-purple-600 bg-clip-text text-transparent drop-shadow-[0_0_10px_rgba(255,255,255,0.4)] mb-2">
           Pesta Mameakhon Batu Ojahan HKBP Batam Centre
         </h1>
-        <p className="text-center text-purple-200 mb-8 text-lg">Mesin Pengundi Nomor Undian</p>
+        <p className="text-center text-purple-200 mb-8 text-lg">Mesin Pengundi Nomor Undian 10.001 - 20.000</p>
 
         {/* BAGIAN UTAMA (roda, tombol, riwayat) */}
         <div className="grid md:grid-cols-3 gap-6">
